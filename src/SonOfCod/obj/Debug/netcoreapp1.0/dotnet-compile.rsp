@@ -203,6 +203,7 @@
 --resource:"C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\obj\Debug\netcoreapp1.0\SonOfCoddotnet-compile.deps.json",SonOfCod.deps.json
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Program.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Startup.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Controllers\AccountController.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161203172039_InitialCreateAccount.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161203172039_InitialCreateAccount.Designer.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\ApplicationDbContextModelSnapshot.cs
