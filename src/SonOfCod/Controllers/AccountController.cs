@@ -36,6 +36,8 @@ namespace SonOfCod.Controllers
         {
             return View();
         }
+
+        [HttpPost]
         public async Task<IActionResult> Register (RegisterViewModel model)
         {
             var user = new ApplicationUser { UserName = model.Email };
