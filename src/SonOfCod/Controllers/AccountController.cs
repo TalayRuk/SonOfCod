@@ -38,7 +38,7 @@ namespace SonOfCod.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register (RegisterViewModel model)
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
             var user = new ApplicationUser { UserName = model.Email };
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
@@ -51,5 +51,28 @@ namespace SonOfCod.Controllers
                 return View();
             }
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            //model at the login view
+            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
+            //SigninAsync method to sign a user in w/their credentials. 
+            //isPersistent set to true mean if not log out, it'll stay log in even if the browser is closed
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        //Add code let the user successfully logs in to Index page
     }
 }
