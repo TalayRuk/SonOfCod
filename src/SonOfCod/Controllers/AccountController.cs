@@ -32,6 +32,10 @@ namespace SonOfCod.Controllers
         // next add view/account/index
 
         //create register view
+        public IActionResult Register()
+        {
+            return View();
+        }
         public async Task<IActionResult> Register (RegisterViewModel model)
         {
             var user = new ApplicationUser { UserName = model.Email };
