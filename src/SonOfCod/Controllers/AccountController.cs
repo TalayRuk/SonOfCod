@@ -52,6 +52,7 @@ namespace SonOfCod.Controllers
             }
         }
 
+        //create Log in
         public IActionResult Login()
         {
             return View();
@@ -74,5 +75,16 @@ namespace SonOfCod.Controllers
             }
         }
         //Add code let the user successfully logs in to Index page
+
+        //Create Log off action (doesn't need it's own view)
+        [HttpPost]
+        public async Task<IActionResult> LogOff()
+        {
+            //SignInManager has the asynchronouse method SignOutAsync() 
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index");
+        }
+        //next update Index to show log out btn
+
     }
 }

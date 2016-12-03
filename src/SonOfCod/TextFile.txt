@@ -16,8 +16,13 @@ Below are the objectives the instructor will use to review your code with you ne
 •Project is in a polished, portfolio-quality state.
 •Required functionality was present by Friday deadline.
 
+Todo:
+Style to forms 
+
 Extra: 
 I wish to :
 ..Use Bootstrap
 ..Add Username instead of email when greeting to welcomepage after log in
 ..Add Smiley face bootstrap to the end of name
+..Add error when not register and try to log in 
+
