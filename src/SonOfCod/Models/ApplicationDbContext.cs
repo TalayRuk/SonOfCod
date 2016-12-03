@@ -12,3 +12,5 @@ namespace SonOfCod.Models
         public ApplicationDbContext(DbContextOptions options) :base(options)
     }
 }
+
+//next setup database in appsettings.json, next configure the application to use Identity w/Entity Framework & MVC in Startup.cs
