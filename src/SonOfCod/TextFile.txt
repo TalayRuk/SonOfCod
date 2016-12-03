@@ -15,3 +15,9 @@ Below are the objectives the instructor will use to review your code with you ne
 •Are you able to discuss your code with your instructor using the correct terminology? 
 •Project is in a polished, portfolio-quality state.
 •Required functionality was present by Friday deadline.
+
+Extra: 
+I wish to :
+..Use Bootstrap
+..Add Username instead of email when greeting to welcomepage after log in
+..Add Smiley face bootstrap to the end of name

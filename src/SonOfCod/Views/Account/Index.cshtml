@@ -3,6 +3,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@using System.Security.Claims 
+
 <h2>Admin Login</h2>
 <hr />
-<p>@Html.ActionLink("Register", "Register")</p>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <h3>Welcome @User.Identity.Name </h3>
+}
+else
+{
+    <p>@Html.ActionLink("Register", "Register")</p>
+    <p>@Html.ActionLink("Log in", "Login")</p>
+
+}
+
