@@ -24,3 +24,4 @@ namespace SonOfCod.ViewModels
         public string ConfirmPassword { get; set; }
     }
 }
+//next add register view to account folder 
