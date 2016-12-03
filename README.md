@@ -29,7 +29,7 @@
 * It's important that you include images and styling across the site. You can use URLs (easiest) or pursue research and discover how to include images in your database (harder). 
 
 ## Setup/Installation
-1. Files can be cloned from https://github.com/TalayRuk/GummiBearKingdom.git 
+1. Files can be cloned from https://github.com/TalayRuk/SonOfCod.git 
 2. Open Visual Studio 2015 : File>Open>Project/Solution
 3. Click Build GummiBearKingdom 
 4. Click IIS Express on the Menu Bar to go to the site
