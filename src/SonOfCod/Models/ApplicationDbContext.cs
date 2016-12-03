@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace SonOfCod.Models
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser> 
+    public class ApplicationDbContext   : IdentityDbContext<ApplicationUser> 
     {
-        public ApplicationDbContext(DbContextOptions options) :base(options)
+        public ApplicationDbContext(DbContextOptions options)   :base(options)
+        {
+            //need to have this open constructor part to not have error 
+        }
     }
 }
 

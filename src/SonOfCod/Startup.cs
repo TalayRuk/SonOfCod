@@ -68,3 +68,4 @@ namespace SonOfCod
         }
     }
 }
+//next we can add-migration AccountInitial 
