@@ -12,3 +12,4 @@ namespace SonOfCod.ViewModels
 
     }
 }
+//next add login.cshtml view
