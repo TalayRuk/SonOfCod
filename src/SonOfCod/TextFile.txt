@@ -1,0 +1,17 @@
+﻿Objectives
+
+Below are the objectives the instructor will use to review your code with you next week:
+•Does your code meet general coding standards (commits, spacing, naming, etc)?
+•Does the application work?
+•Have you written tests to verify that all routes are returning views?
+•Have you written a test that verifies that the mailing list is correctly populating?
+•Do your routes follow proper convention?
+•Have you successfully implemented authentication?
+•Does the app contain a fully functional Marketing page, with admin edit functionality? 
+•Does the app include a fully functional newsletter signup page, complete with admin access to the mailing list?
+•Are form and route helpers present and functioning?
+•Does the app use a Layout file for styling across the app, including images?
+•Is the database written code-first, with clear migration instruction?
+•Are you able to discuss your code with your instructor using the correct terminology? 
+•Project is in a polished, portfolio-quality state.
+•Required functionality was present by Friday deadline.
