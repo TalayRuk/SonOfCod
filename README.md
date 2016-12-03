@@ -1,8 +1,8 @@
 # Son of Cod
 ## Independent Project using .Net Core Authentication
-#### Create a mock-up site. Use http://www.albanesecandy.com/ as Sample Site
+#### Create a mock-up site. Use http://www.pacseafood.com/ as Sample Site
 
-#### By _** Vichitra Pool / September 29th, 2016**_
+#### By _** Vichitra Pool / Dec 2nd, 2016**_
 
 ## Specs
  * The site should be accessible to anonymous users, and to admins from the Son of Cod marketing team. 
