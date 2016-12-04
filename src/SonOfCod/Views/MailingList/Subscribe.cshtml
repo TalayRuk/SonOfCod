@@ -16,7 +16,8 @@
     @using (Html.BeginForm())
     {
         @Html.LabelFor(model => model.First_name)
-        @Html.TextBoxFor
+        @Html.TextBoxFor(model => model.First_name)
+        <br /><br />
 
     }
 
