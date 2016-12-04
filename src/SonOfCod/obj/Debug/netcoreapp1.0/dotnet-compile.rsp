@@ -208,6 +208,8 @@ C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161203172039_I
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161203172039_InitialCreateAccount.Designer.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161204150011_InitialCreateSubscriber.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161204150011_InitialCreateSubscriber.Designer.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161204151454_AddSubscriberDbConnection.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161204151454_AddSubscriberDbConnection.Designer.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\AdminDbContextModelSnapshot.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\AdminDbContext.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\AdminUser.cs
