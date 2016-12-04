@@ -7,12 +7,17 @@ using System.Threading.Tasks;
 
 namespace SonOfCod.Models
 {
-    public class ApplicationDbContext   : IdentityDbContext<ApplicationUser> 
+    public class AdminDbContext   : IdentityDbContext<AdminUser> 
     {
-        public ApplicationDbContext(DbContextOptions options)   :base(options)
+        public AdminDbContext(DbContextOptions options)   :base(options)
         {
             //need to have this open constructor part to not have error 
         }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+        public DbSet<Subscriber> Subscribers { get; set; }
     }
 }
 

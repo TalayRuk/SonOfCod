@@ -33,10 +33,10 @@ namespace SonOfCod
             //MVC, EntityFramwork to connect to database, AddIdentity
             services.AddMvc();
             services.AddEntityFramework()
-                .AddDbContext<ApplicationDbContext>(options =>
+                .AddDbContext<AdminDbContext>(options =>
                   options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddIdentity<AdminUser, IdentityRole>()
+                .AddEntityFrameworkStores<AdminDbContext>()
                 .AddDefaultTokenProviders();
             
         }

@@ -14,11 +14,11 @@ namespace SonOfCod.Controllers
     public class AccountController : Controller
     {
         // GET: /<controller>/
-        private readonly ApplicationDbContext _db;
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly AdminDbContext _db;
+        private readonly UserManager<AdminUser> _userManager;
+        private readonly SignInManager<AdminUser> _signInManager;
 
-        public AccountController (UserManager<ApplicationUser> userManger, SignInManager<ApplicationUser> signInManager, ApplicationDbContext db)
+        public AccountController (UserManager<AdminUser> userManger, SignInManager<AdminUser> signInManager, AdminDbContext db)
         {
             _userManager = userManger;
             _signInManager = signInManager;
@@ -40,7 +40,7 @@ namespace SonOfCod.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            var user = new ApplicationUser { UserName = model.Email };
+            var user = new AdminUser { UserName = model.Email };
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {

@@ -8,10 +8,9 @@ using SonOfCod.Models;
 namespace SonOfCod.Migrations
 {
     [DbContext(typeof(AdminDbContext))]
-    [Migration("20161203172039_InitialCreateAccount")]
-    partial class InitialCreateAccount
+    partial class AdminDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")

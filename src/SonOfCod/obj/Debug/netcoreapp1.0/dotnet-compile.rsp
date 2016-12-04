@@ -206,8 +206,11 @@ C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Startup.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Controllers\AccountController.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161203172039_InitialCreateAccount.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161203172039_InitialCreateAccount.Designer.cs
-C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\ApplicationDbContextModelSnapshot.cs
-C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\ApplicationDbContext.cs
-C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\ApplicationUser.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161204150011_InitialCreateSubscriber.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161204150011_InitialCreateSubscriber.Designer.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\AdminDbContextModelSnapshot.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\AdminDbContext.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\AdminUser.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\Subscriber.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\ViewModels\LoginViewModel.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\ViewModels\RegisterViewModel.cs

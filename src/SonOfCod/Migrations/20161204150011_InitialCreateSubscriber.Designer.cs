@@ -7,10 +7,11 @@ using SonOfCod.Models;
 
 namespace SonOfCod.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AdminDbContext))]
+    [Migration("20161204150011_InitialCreateSubscriber")]
+    partial class InitialCreateSubscriber
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -123,7 +124,7 @@ namespace SonOfCod.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("SonOfCod.Models.ApplicationUser", b =>
+            modelBuilder.Entity("SonOfCod.Models.AdminUser", b =>
                 {
                     b.Property<string>("Id");
 
@@ -182,7 +183,7 @@ namespace SonOfCod.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("SonOfCod.Models.ApplicationUser")
+                    b.HasOne("SonOfCod.Models.AdminUser")
                         .WithMany("Claims")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -190,7 +191,7 @@ namespace SonOfCod.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("SonOfCod.Models.ApplicationUser")
+                    b.HasOne("SonOfCod.Models.AdminUser")
                         .WithMany("Logins")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -203,7 +204,7 @@ namespace SonOfCod.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("SonOfCod.Models.ApplicationUser")
+                    b.HasOne("SonOfCod.Models.AdminUser")
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

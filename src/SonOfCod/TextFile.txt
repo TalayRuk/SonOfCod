@@ -25,4 +25,5 @@ I wish to :
 ..Add Username instead of email when greeting to welcomepage after log in
 ..Add Smiley face bootstrap to the end of name
 ..Add error when not register and try to log in 
+..Add Role for admin
 
