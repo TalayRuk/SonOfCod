@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Subscribe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SonOfCod.Models.Subscriber
+<div class="container"
+    <h1>Son of Cod Seafood Newsletter Subscription</h1>
+
+    <hr />
+
+    <h2><strong>New Subscriber</Strong>: Please Complete the information form below If you are interested in reiceiving a Free subscription to Our Newsletter.</h2>
+
+    <h4><span class="asterisk"> * </span>  Fields marked with an asterisk indicate a required response.</h4>
+    <br /><br />
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.First_name)
+        @Html.TextBoxFor
+
+    }
+
+
+</div>
