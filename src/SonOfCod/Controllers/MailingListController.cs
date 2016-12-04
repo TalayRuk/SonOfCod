@@ -23,10 +23,25 @@ namespace SonOfCod.Controllers
             _userManager = userManager;
             _db = db;
         }
+        //only Authorized admin can view index
         public IActionResult Index()
+        {
+            return View(db.Subscribers.ToList());
+        }
+
+        //Anyone can view Subscription page ***AllowAnonymous will override any Authorize cmd so Don't put it at Controller level
+        [AllowAnonymous]
+        public IActionResult Subscribe()
         {
             return View();
         }
         
+        [HttpPost]
+        public IActionResult Subscribe(Subscriber subscriber)
+        {
+            _db.Subscribers.Add(subscriber);
+            _db.SaveChanges();
+            return RedirectToAction("Thanks");
+        }
     }
 }
