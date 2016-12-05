@@ -23,6 +23,9 @@ namespace SonOfCod.Tests.ControllerTests
         }
         
         [Fact]
+        //Can't do this test w/subscription b/c subscription index view doesn't have list
+        //Need to refigure my controllers & view page
+
         public void Get_ModelList_Index_Test()
         {
             //Arrange
