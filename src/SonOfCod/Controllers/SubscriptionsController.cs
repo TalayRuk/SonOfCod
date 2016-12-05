@@ -15,7 +15,11 @@ namespace SonOfCod.Controllers
     {
         // GET: /<controller>/
         private AdminDbContext _db;
-       
+
+        public SubscriptionsController()
+        {
+        }
+
         public SubscriptionsController (AdminDbContext db)
         {
             _db = db;

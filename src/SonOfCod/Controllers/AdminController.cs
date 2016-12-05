@@ -29,10 +29,6 @@ namespace SonOfCod.Controllers
 
         }
 
-        public AdminController()
-        {
-        }
-
         public IActionResult Register()
         {
             return View();
