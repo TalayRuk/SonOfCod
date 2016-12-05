@@ -21,5 +21,18 @@ namespace SonOfCod.Tests.ControllerTests
             //Assert
             Assert.IsType<ViewResult>(result);
         }
+        
+        [Fact]
+        public void Get_ModelList_Index_Test()
+        {
+            //Arrange
+            SubscriptionsController controller = new SubscriptionsController();
+            IActionResult actionResult = controller.Index();
+            ViewResult indexView = new SubscriptionsController().Index() as ViewResult;
+            //Act
+            var result = indexView.ViewData.Model;
+            //Assert
+            Assert.IsType<List<Subscriber>>(result);
+        }
     }
 }
