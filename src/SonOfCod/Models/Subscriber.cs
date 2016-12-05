@@ -17,6 +17,5 @@ namespace SonOfCod.Models
         public string Last_name { get; set; }
         public string Company { get; set; }
         public string Consumer_type { get; set; }
-        public virtual AdminUser User { get; set; }
     }
 }

@@ -11,14 +11,14 @@ using SonOfCod.ViewModels;
 
 namespace SonOfCod.Controllers
 {
-    public class AccountController : Controller
+    public class AdminController : Controller
     {
         // GET: /<controller>/
         private readonly AdminDbContext _db;
         private readonly UserManager<AdminUser> _userManager;
         private readonly SignInManager<AdminUser> _signInManager;
 
-        public AccountController (UserManager<AdminUser> userManger, SignInManager<AdminUser> signInManager, AdminDbContext db)
+        public AdminController (UserManager<AdminUser> userManger, SignInManager<AdminUser> signInManager, AdminDbContext db)
         {
             _userManager = userManger;
             _signInManager = signInManager;

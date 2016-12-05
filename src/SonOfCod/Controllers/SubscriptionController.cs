@@ -12,13 +12,13 @@ using Microsoft.AspNetCore.Identity;
 namespace SonOfCod.Controllers
 {
     [Authorize]
-    public class MailingListController : Controller
+    public class SubscriptionController : Controller
     {
         // GET: /<controller>/
         private readonly AdminDbContext _db;
         private readonly UserManager<AdminUser> _userManager;
 
-        public MailingListController (UserManager<AdminUser> userManager, AdminDbContext db)
+        public SubscriptionController (UserManager<AdminUser> userManager, AdminDbContext db)
         {
             _userManager = userManager;
             _db = db;
