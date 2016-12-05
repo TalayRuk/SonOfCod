@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using SonOfCod.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -101,6 +102,10 @@ namespace SonOfCod.Controllers
         }
         
         //[Authorize]
+        public IActionResult Marketing()
+        {
+            return View(_db.Promotions.ToList());
+        }
         public IActionResult CreateMarketing()
         {
             return View();
@@ -114,19 +119,19 @@ namespace SonOfCod.Controllers
             //promotion.User = currentUser;
             _db.Promotions.Add(promotion);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Marketing");
         }
 
         public IActionResult EditMarketing(int id)
         {
-            var thisPromo = db.Promotions.FirstOrDefault(promos => promos.PromotionId == id);
+            var thisPromo = _db.Promotions.FirstOrDefault(promos => promos.Id == id);
             return View(thisPromo);
         }
 
         [HttpPost]
         public IActionResult EditMarketing(Promotion promotion)
         {
-            _db.Entry(promotion).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _db.Entry(promotion).State = EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Marketing");
         }

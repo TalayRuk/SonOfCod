@@ -15,7 +15,7 @@ namespace SonOfCod.Models
         public string Title { get; set; }
         public string Image_url { get; set; }
         public string Description { get; set; }
-        public virtual AdminUser User { get; set; }
+        
 
     }
 }

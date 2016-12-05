@@ -1,23 +1,30 @@
-﻿@{
+﻿@model SonOfCod.Models.Promotion
+@{
     ViewData["Title"] = "Marketing";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model SonOfCod.Models.Promotion
+
 @using System.Security.Claims
 <div class="container">
     <h2>Welcome to Son Of Cod</h2>
     <p>Team can Post Marketing's Information Here</p>
     @using(Html.BeginForm())
     {
-        <h2>)</h2>
+        @Html.LabelFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title)
         <br /><br />
-            
+        @Html.LabelFor(model => model.Image_url)
+        @Html.TextBoxFor(model => model.Image_url)
+        <br /><br />
+        @Html.LabelFor(model => model.Description)
+        @Html.TextBoxFor(model => model.Description)
+        <br /><br />
+        
 
+        <input type="submit" value="CreateMarketing" class="btn btn-danger" />
 
     }
+    <p>@Html.ActionLink("Back to Products", "Index")</p>
 
 </div>
 
-Title { get; set; }
-        public string Image_url { get; set; }
-        public string Description { get; set; }

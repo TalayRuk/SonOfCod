@@ -11,6 +11,7 @@
     @if (User.Identity.IsAuthenticated)
     {
         <h3>Welcome @User.Identity.Name </h3>
+        
 
         @using (Html.BeginForm("LogOff", "Admin"))
         {
@@ -24,5 +25,5 @@
         <p>@Html.ActionLink("Log in", "Login")</p>
 
     }
-
+    
 </div>
