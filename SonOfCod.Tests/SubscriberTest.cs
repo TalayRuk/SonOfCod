@@ -14,6 +14,7 @@ namespace SonOfCod.Tests
         {
             //Arrange
             var subscriber = new Subscriber();
+            subscriber.Email = "Talay@me";
             //Act
             var result = subscriber.Email;
             //Assert
