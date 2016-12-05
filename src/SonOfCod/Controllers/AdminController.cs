@@ -101,13 +101,13 @@ namespace SonOfCod.Controllers
         }
         
         //[Authorize]
-        public IActionResult Marketing()
+        public IActionResult CreateMarketing()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Marketing(Promotion promotion)
+        public IActionResult CreateMarketing(Promotion promotion)
         {
             //var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             //var currentUser = await _userManager.FindByIdAsync(userId);
