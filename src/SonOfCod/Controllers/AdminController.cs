@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using SonOfCod.Models;
 using Microsoft.AspNetCore.Identity;
 using SonOfCod.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -97,13 +99,40 @@ namespace SonOfCod.Controllers
         {
             return View(_db.Subscribers.ToList());
         }
-
+        
+        //[Authorize]
         public IActionResult Marketing()
         {
             return View();
         }
 
-        
+        [HttpPost]
+        public IActionResult Marketing(Promotion promotion)
+        {
+            //var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            //var currentUser = await _userManager.FindByIdAsync(userId);
+            //promotion.User = currentUser;
+            _db.Promotions.Add(promotion);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult EditMarketing(int id)
+        {
+            var thisPromo = db.Promotions.FirstOrDefault(promos => promos.PromotionId == id);
+            return View(thisPromo);
+        }
+
+        [HttpPost]
+        public IActionResult EditMarketing(Promotion promotion)
+        {
+            
+            _db.Promotions.Add(promotion);
+            _db.SaveChanges();
+            return RedirectToAction("Marketing");
+        }
+
+
 
     }
 }
