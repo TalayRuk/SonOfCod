@@ -26,4 +26,5 @@ I wish to :
 ..Add Smiley face bootstrap to the end of name
 ..Add error when not register and try to log in 
 ..Add Role for admin
+..Add Checkbox for consumer_type in subscriber view
 

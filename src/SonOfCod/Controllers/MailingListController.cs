@@ -26,7 +26,7 @@ namespace SonOfCod.Controllers
         //only Authorized admin can view index
         public IActionResult Index()
         {
-            return View(db.Subscribers.ToList());
+            return View(_db.Subscribers.ToList());
         }
 
         //Anyone can view Subscription page ***AllowAnonymous will override any Authorize cmd so Don't put it at Controller level
