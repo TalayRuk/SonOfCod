@@ -33,17 +33,13 @@ namespace SonOfCod.Controllers
         {
         }
 
-        public IActionResult Index()
+        public IActionResult Register()
         {
             return View();
         }
         // next add view/account/index
 
         //create register view
-        public IActionResult Register()
-        {
-            return View();
-        }
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
