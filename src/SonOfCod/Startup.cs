@@ -59,7 +59,7 @@ namespace SonOfCod
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Subscription}/{action=Index}/{id?}");
+                    template: "{controller=PromoPage}/{action=Index}/{id?}");
             });
 
             app.Run(async (context) =>

@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<SonOfCod.Models.Promotion>
 
 @{
-    ViewData["Title"] = "Marketing";
+    ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="container">
 
-    <h2>Welcome @User.Identity.Name, to Promotion Page</h2>
+    <h2>Thank you for interested in Son Of Cod Promotion</h2>
     <br /><br />
     <h3></h3>
     <table class="table">
@@ -32,8 +32,6 @@
                         <br />
                         @Html.DisplayFor(modelPromotion => listPromotion.Description)
                         <br />
-                        @Html.ActionLink("Create", "CreateMarketing", new { id = listPromotion.Id }) |
-
                     </td>
                 </tr>
             }
@@ -41,7 +39,7 @@
         }
         else
         {
-            <h4>No Promotion have been added yet!</h4>
+            <tr>No Promotion have been added yet!</tr>
 
         }
     </table>
