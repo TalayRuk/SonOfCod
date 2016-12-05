@@ -11,40 +11,31 @@ using Microsoft.AspNetCore.Identity;
 
 namespace SonOfCod.Controllers
 {
-    [Authorize]
     public class SubscriptionController : Controller
     {
         // GET: /<controller>/
-        private readonly AdminDbContext _db;
-        private readonly UserManager<AdminUser> _userManager;
-
-        public SubscriptionController (UserManager<AdminUser> userManager, AdminDbContext db)
+        private AdminDbContext _db;
+       
+        public SubscriptionController (AdminDbContext db)
         {
-            _userManager = userManager;
             _db = db;
         }
-        //only Authorized admin can view index
-        public IActionResult Index()
-        {
-            return View(_db.Subscribers.ToList());
-        }
 
-        //Anyone can view Subscription page ***AllowAnonymous will override any Authorize cmd so Don't put it at Controller level
-        [AllowAnonymous]
-        public IActionResult Subscribe()
+        //Anyone can view Subscription page 
+        
+        public IActionResult Index()
         {
             return View();
         }
         
         [HttpPost]
-        public IActionResult Subscribe(Subscriber subscriber)
+        public IActionResult Index(Subscriber subscriber)
         {
             _db.Subscribers.Add(subscriber);
             _db.SaveChanges();
             return RedirectToAction("Thanks");
         }
 
-        [AllowAnonymous]
         public IActionResult Thanks()
         {
             return View();
