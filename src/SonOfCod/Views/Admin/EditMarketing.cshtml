@@ -1,10 +1,31 @@
-﻿@{
+﻿@model SonOfCod.Models.Promotion
+@{
     ViewData["Title"] = "Edit Marketing";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @using System.Security.Claims
 <div class="container">
-    <h2>Welcome to Son Of Cod</h2>
+    <h2>Edit this Promotion: @Html.DisplayFor(model => model.Title)</h2>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id)
+
+        @Html.LabelFor(model => model.Title)
+        @Html.EditorFor(model => model.Title)
+        <br /><br />
+        @Html.LabelFor(model => model.Image_url)
+        @Html.TextBoxFor(model => model.Image_url)
+        <br /><br />
+        @Html.LabelFor(model => model.Description)
+        @Html.TextAreaFor(model => model.Description)
+        <br /><br />
+
+        <input type="submit" value="Save" class="btn btn-primary" />
+
+    }
+    <p>@Html.ActionLink("Back to Marketing Page", "Marketing")</p>
     
 
 </div>

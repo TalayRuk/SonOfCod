@@ -27,13 +27,13 @@
                 {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelPromotion => listPromotion.Title)
+                        <strong>@Html.DisplayFor(modelPromotion => listPromotion.Title)</strong>
                         <br />
-                        <img src="listPromotion.Image_url" alt="listPromotion.Title" />
+                        <img src="@listPromotion.Image_url" alt="@listPromotion.Title" />
                         <br />
                         @Html.DisplayFor(modelPromotion => listPromotion.Description)
                         <br />
-                        @Html.ActionLink("Create", "CreateMarketing", new { id = listPromotion.Id }) | 
+                        @Html.ActionLink("Edit", "CreateMarketing", new { id = listPromotion.Id }) | 
                        
                     </td>
                 </tr>
