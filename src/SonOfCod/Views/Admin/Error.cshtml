@@ -1,0 +1,14 @@
+﻿@model IEnumerable<SonOfCod.Models.Subscriber>
+
+@{
+    ViewData["Title"] = "Error";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <br /><br />
+    <h3>Please Enter the correct password!</h3>
+    <br /><br />
+    <h3>**Note** Your Password requires at least 6 characters, a capital letter, a digit, and a special character.</h3>
+    <br /><br />
+    @Html.ActionLink("Main page", "Index", "Admin")
+</div>
