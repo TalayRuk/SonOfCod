@@ -48,7 +48,7 @@ namespace SonOfCod.Controllers
             }
             else
             {
-                return View();
+                return View("Error");
             }
         }
 
@@ -71,10 +71,17 @@ namespace SonOfCod.Controllers
             }
             else
             {
-                return View();
+                return View("Error");
             }
         }
         //Add code let the user successfully logs in to Index page
+
+        //Add error page
+        public IActionResult Error()
+        {
+            return View();
+        }
+        //Create Error view Page 
 
         //Create Log off action (doesn't need it's own view)
         [HttpPost]
@@ -85,6 +92,7 @@ namespace SonOfCod.Controllers
             return RedirectToAction("Index");
         }
         //next update Index to show log out btn
+
 
     }
 }
