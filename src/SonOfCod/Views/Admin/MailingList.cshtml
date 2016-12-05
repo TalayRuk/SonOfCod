@@ -11,25 +11,59 @@
 
     <h2>Here is your List of Newsletter's subscribers </h2>
     <hr />
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consumer_type)
+            </th>
+            <th></th>
+        </tr>
 
-    @if (Model.Any())
-    {
-        <ul>
+
+        @if (Model.Any())
+        {
+
             @foreach (var listSubscriber in Model)
-            {
-                <li>@Html.DisplayFor(modelSubscriber => listSubscriber.Email)</li>
-                <li>@Html.DisplayFor(modelSubscriber => listSubscriber.First_name) @Html.DisplayFor(modelSubscriber => listSubscriber.Last_name)</li>
-                <li>@Html.DisplayFor(modelSubscriber => listSubscriber.Company)</li>
-                <li>@Html.DisplayFor(modelSubscriber => listSubscriber.Consumer_type)</li>
-
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelSubscriber => listSubscriber.First_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelSubscriber => listSubscriber.Last_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelSubscriber => listSubscriber.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelSubscriber => listSubscriber.Company)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelSubscriber => listSubscriber.Consumer_type)
+                    </td>       
+                </tr>
             }
-        </ul>
-    }
-    else
-    {
-        <h4>No Subscribers have been added yet!</h4>
 
-    }
+        }
+        else
+        {
+            <h4>No Subscribers have been added yet!</h4>
 
-    @Html.ActionLink("Main page", "Index", "Admin")
-</div>
+        }
+    </table>
+
+        <br /><br />
+        @Html.ActionLink("Main page", "Index", "Admin")
+    </div>

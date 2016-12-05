@@ -14,13 +14,16 @@
     <br /><br />
     @using (Html.BeginForm("Register", "Admin", FormMethod.Post))
     {
-        @Html.LabelFor(m => m.Email)
+        @Html.LabelFor(m => m.Email) 
+        <br />
         @Html.TextBoxFor(m => m.Email)
         <br /><br />
         @Html.LabelFor(m => m.Password)
+        <br />
         @Html.PasswordFor(m => m.Password)
         <br /><br />
         @Html.LabelFor(m => m.ConfirmPassword)
+        <br />
         @Html.PasswordFor(m => m.ConfirmPassword)
         <br /><br />
         <input type="submit" value="Register" class="btn btn-primary" />
