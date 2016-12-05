@@ -19,6 +19,7 @@ namespace SonOfCod.Models
             base.OnModelCreating(builder);
         }
         public DbSet<Subscriber> Subscribers { get; set; }
+        public DbSet<Promotion> Promotions { get; set; }
     }
 }
 
