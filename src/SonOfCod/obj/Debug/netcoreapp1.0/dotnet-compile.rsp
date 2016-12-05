@@ -216,6 +216,8 @@ C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161205105536_D
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161205105536_DeleteUserFromSubscriber.Designer.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161205112849_InitialCreatePromotion.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161205112849_InitialCreatePromotion.Designer.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161205114934_AddAdminUserToPromotion.cs
+C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\20161205114934_AddAdminUserToPromotion.Designer.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Migrations\AdminDbContextModelSnapshot.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\AdminDbContext.cs
 C:\Users\Vichitra Pool\Desktop\SonOfCod\src\SonOfCod\Models\AdminUser.cs

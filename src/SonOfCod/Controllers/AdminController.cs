@@ -97,5 +97,13 @@ namespace SonOfCod.Controllers
         {
             return View(_db.Subscribers.ToList());
         }
+
+        public IActionResult Marketing()
+        {
+            return View();
+        }
+
+        
+
     }
 }
