@@ -93,6 +93,9 @@ namespace SonOfCod.Controllers
         }
         //next update Index to show log out btn
 
-
+        public IActionResult MailingList()
+        {
+            return View(_db.Subscribers.ToList());
+        }
     }
 }
