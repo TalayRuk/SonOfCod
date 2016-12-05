@@ -8,9 +8,10 @@
     @using SonOfCod.ViewModels
     @model RegisterViewModel
 
-    <h2>Register a new user</h2>
+    <h2>Register a new Admin</h2>
     <hr />
-
+    <h4>**Note** Password requires at least 6 characters, a capital letter, a digit, and a special character.</h4>
+    <br /><br />
     @using (Html.BeginForm("Register", "Admin", FormMethod.Post))
     {
         @Html.LabelFor(m => m.Email)
