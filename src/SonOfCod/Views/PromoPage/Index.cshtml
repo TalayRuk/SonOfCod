@@ -12,8 +12,9 @@
     <table class="table">
         <tr>
             <th>
-                 
-                <h2>@Html.ActionLink("Subscribe our Newsletter", "Index", "Subscription")</h2>
+                <div class="jumbotron">
+                    <h2>@Html.ActionLink("Subscribe our Newsletter", "Index", "Subscription")</h2>
+                </div>   
 </th>
             <th></th>
         </tr>
@@ -26,9 +27,9 @@
                 {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelPromotion => listPromotion.Title)
+                        <strong>@Html.DisplayFor(modelPromotion => listPromotion.Title)</strong>
                         <br />
-                        <img src="listPromotion.Image_url" alt="listPromotion.Title" />
+                        <img src="@listPromotion.Image_url" alt="@listPromotion.Title" />
                         <br />
                         @Html.DisplayFor(modelPromotion => listPromotion.Description)
                         <br />

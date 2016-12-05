@@ -14,6 +14,9 @@ namespace SonOfCod.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public string Image_url { get; set; }
+
+        [MinLength(10)]
+        [MaxLength(5000)]
         public string Description { get; set; }
         
 

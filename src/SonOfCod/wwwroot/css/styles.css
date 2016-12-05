@@ -1,6 +1,12 @@
 ﻿#error {
     color: red;
 }
-table {
+.jumbotron {
     text-align: center;
+}
+.table {
+    text-align: center;
+}
+img #marketing {
+    width: 25%;
 }
