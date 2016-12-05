@@ -126,8 +126,7 @@ namespace SonOfCod.Controllers
         [HttpPost]
         public IActionResult EditMarketing(Promotion promotion)
         {
-            
-            _db.Promotions.Add(promotion);
+            _db.Entry(promotion).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _db.SaveChanges();
             return RedirectToAction("Marketing");
         }
