@@ -28,6 +28,11 @@ namespace SonOfCod.Controllers
             _db = db;
 
         }
+
+        public AdminController()
+        {
+        }
+
         public IActionResult Index()
         {
             return View();
