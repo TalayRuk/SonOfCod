@@ -54,11 +54,12 @@ namespace SonOfCod
 
             //Add useIdentity, MVC routes
             app.UseIdentity();
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Account}/{action=Index}/{id?}");
+                    template: "{controller=Subscription}/{action=Index}/{id?}");
             });
 
             app.Run(async (context) =>
