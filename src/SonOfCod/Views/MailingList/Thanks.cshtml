@@ -1,11 +1,12 @@
-﻿@model SonOfCod.Models.Subscriber
+﻿@model IEnumerable<SonOfCod.Models.Subscriber>
 
 @{
-    ViewData["Title"] = "Subscribe";
+    ViewData["Title"] = "Thank you";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Hi @Model.First_name :D,</h2>
+<br /><br />
 <h3>Thank you for subscribing our Newsletter </h3>
+<br />
 
 @Html.ActionLink("Main page", "Index", "Account")

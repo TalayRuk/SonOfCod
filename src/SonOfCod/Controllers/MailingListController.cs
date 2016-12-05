@@ -43,5 +43,11 @@ namespace SonOfCod.Controllers
             _db.SaveChanges();
             return RedirectToAction("Thanks");
         }
+
+        [AllowAnonymous]
+        public IActionResult Thanks()
+        {
+            return View();
+        }
     }
 }
