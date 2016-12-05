@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<SonOfCod.Models.Subscriber>
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -10,5 +11,24 @@
 
 <h2>Here is your List of Newsletter's subscribers </h2>
 <hr />
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var listSubscriber in Model)
+        {
+            <li>@Html.DisplayFor(modelSubscriber => listSubscriber.Email)</li>
+            <li>@Html.DisplayFor(modelSubscriber => listSubscriber.First_name) @Html.DisplayFor(modelSubscriber => listSubscriber.Last_name)</li>
+            <li>@Html.DisplayFor(modelSubscriber => listSubscriber.Company)</li>
+            <li>@Html.DisplayFor(modelSubscriber => listSubscriber.Consumer_type)</li>
+
+        }
+    </ul>
+}
+else
+{
+    <h4>No Subscribers have been added yet!</h4>
+
+}
 
 @Html.ActionLink("Main page", "Index", "Account")
