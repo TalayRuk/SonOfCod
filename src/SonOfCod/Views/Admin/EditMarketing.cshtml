@@ -13,10 +13,10 @@
         @Html.HiddenFor(model => model.Id)
 
         @Html.LabelFor(model => model.Title)
-        @Html.EditorFor(model => model.Title)
+        @Html.EditorFor(model => model.Title )
         <br /><br />
         @Html.LabelFor(model => model.Image_url)
-        @Html.TextBoxFor(model => model.Image_url)
+        @Html.EditorFor(model => model.Image_url)
         <br /><br />
         @Html.LabelFor(model => model.Description)
         @Html.TextAreaFor(model => model.Description)

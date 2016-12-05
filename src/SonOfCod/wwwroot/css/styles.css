@@ -1,4 +1,7 @@
-﻿#error {
+﻿.container {
+    text-align: center; 
+}
+#error {
     color: red;
 }
 .jumbotron {
