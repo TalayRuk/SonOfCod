@@ -11,12 +11,12 @@ using Microsoft.AspNetCore.Identity;
 
 namespace SonOfCod.Controllers
 {
-    public class SubscriptionController : Controller
+    public class SubscriptionsController : Controller
     {
         // GET: /<controller>/
         private AdminDbContext _db;
        
-        public SubscriptionController (AdminDbContext db)
+        public SubscriptionsController (AdminDbContext db)
         {
             _db = db;
         }
