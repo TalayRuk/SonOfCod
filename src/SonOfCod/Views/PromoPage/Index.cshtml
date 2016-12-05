@@ -1,20 +1,54 @@
 ﻿@model IEnumerable<SonOfCod.Models.Promotion>
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Marketing";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <div class="container">
-    <h2>Welcome to Our Promotion Page</h2>
 
-    @Html.DisplayNameFor(model => model.Title)
+    <h2>Welcome @User.Identity.Name, to Promotion Page</h2>
+    <br /><br />
+    <h3></h3>
+    <table class="table">
+        <tr>
+            <th>
+                 
+                <h2>@Html.ActionLink("Sign Up for our Newsletter", "Index", "Subscription")</h2>
+</th>
+            <th></th>
+        </tr>
 
-    <ul>
-        @foreach (var listPromotion in Model)
+
+        @if (Model.Any())
         {
-            <li>@Html.DisplayFor(modelPromotion => listPromotion.Title)</li>
+
+            @foreach (var listPromotion in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelPromotion => listPromotion.Title)
+                        <br />
+                        <img src="listPromotion.Image_url" alt="listPromotion.Title" />
+                        <br />
+                        @Html.DisplayFor(modelPromotion => listPromotion.Description)
+                        <br />
+                        @Html.ActionLink("Create", "CreateMarketing", new { id = listPromotion.Id }) |
+
+                    </td>
+                </tr>
+            }
 
         }
-        
-    </ul>
+        else
+        {
+            <h4>No Promotion have been added yet!</h4>
+
+        }
+    </table>
+
+    <br /><br />
+
+    @Html.ActionLink("Main page", "Index", "Admin")
 </div>
+
+

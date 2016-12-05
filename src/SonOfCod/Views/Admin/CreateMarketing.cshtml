@@ -17,14 +17,13 @@
         @Html.TextBoxFor(model => model.Image_url)
         <br /><br />
         @Html.LabelFor(model => model.Description)
-        @Html.TextBoxFor(model => model.Description)
-        <br /><br />
-        
+        @Html.TextAreaFor(model => model.Description)
+        <br /><br /> 
 
-        <input type="submit" value="CreateMarketing" class="btn btn-danger" />
+        <input type="submit" value="CreateMarketing" class="btn btn-primary" />
 
     }
-    <p>@Html.ActionLink("Back to Products", "Index")</p>
+    <p>@Html.ActionLink("Back to Marketing Page", "Marketing")</p>
 
 </div>
 
