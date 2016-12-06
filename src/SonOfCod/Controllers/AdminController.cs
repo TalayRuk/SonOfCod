@@ -114,10 +114,10 @@ namespace SonOfCod.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateMarketing(Promotion promotion)
+        public async Task<IActionResult> CreateMarketing(Promotion promotion)
         {
-            //var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            //var currentUser = await _userManager.FindByIdAsync(userId);
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
             //promotion.User = currentUser;
             _db.Promotions.Add(promotion);
             _db.SaveChanges();

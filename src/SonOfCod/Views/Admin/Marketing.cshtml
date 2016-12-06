@@ -8,7 +8,7 @@
 
     <h2>Welcome @User.Identity.Name, to Marketing Page</h2>
     <br /><br />
-    
+    <h4>@Html.ActionLink("Add new promotion", "CreateMarketing")</h4>
     <table class="table" >
         <tr>
             <th>
@@ -32,8 +32,7 @@
                         <img id="marketing" src="@listPromotion.Image_url" alt="@listPromotion.Title" />
                         <br />
                         @Html.DisplayFor(modelPromotion => listPromotion.Description)
-                        <br />
-                        @Html.ActionLink("Create", "CreateMarketing", new { id = listPromotion.Id }) |                        
+                        <br />                        
                         @Html.ActionLink("Edit", "EditMarketing", new { id = listPromotion.Id }) |
                         @Html.ActionLink("Delete", "DeleteMarketing", new { id = listPromotion.Id })
 
