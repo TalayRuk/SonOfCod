@@ -133,6 +133,21 @@ namespace SonOfCod.Controllers
             return RedirectToAction("Marketing");
         }
 
+        public IActionResult DeleteMarketing(int id)
+        {
+            var thisPromo = _db.Promotions.FirstOrDefault(promos => promos.Id == id);
+            return View(thisPromo);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteMarketingConfirmed(int id)
+        {
+            var thisPromo = _db.Promotions.FirstOrDefault(promos => promos.Id == id);
+            _db.Promotions.Remove(thisPromo);
+            _db.SaveChanges();
+            return RedirectToAction("Marketing");
+        }
+
 
 
     }
