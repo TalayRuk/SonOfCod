@@ -33,7 +33,7 @@ namespace SonOfCod.Controllers
         {
             return View();
         }
-        // next add view/account/index
+        // next add view/admin/index
 
         //create register view
 
