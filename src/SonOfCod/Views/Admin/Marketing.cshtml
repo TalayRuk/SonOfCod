@@ -6,7 +6,7 @@
 }
 <div class="container">
 
-    <h2>Welcome @User.Identity.Name, to Promotion Page</h2>
+    <h2>Welcome @User.Identity.Name, to Marketing Page</h2>
     <br /><br />
     
     <table class="table" >
@@ -33,7 +33,10 @@
                         <br />
                         @Html.DisplayFor(modelPromotion => listPromotion.Description)
                         <br />
-                        @Html.ActionLink("Edit", "EditMarketing", new { id = listPromotion.Id })  
+                        @Html.ActionLink("Create", "CreateMarketing", new { id = listPromotion.Id }) |                        
+                        @Html.ActionLink("Edit", "EditMarketing", new { id = listPromotion.Id }) |
+                        @Html.ActionLink("Delete", "DeleteMarketing", new { id = listPromotion.Id })
+
                        
                     </td>
                 </tr>

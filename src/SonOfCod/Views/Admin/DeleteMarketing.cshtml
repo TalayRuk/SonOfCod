@@ -1,0 +1,21 @@
+﻿@model SonOfCod.Models.Promotion
+@{
+    ViewData["Title"] = "Edit Marketing";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Security.Claims
+<div class="container">
+    
+    <h2>Are you sure you want to Delete this Promotion: @Html.DisplayFor(model => model.Title)?</h2>
+    <hr />
+
+    @using (Html.BeginForm())
+    {
+        <br /><br />
+        <input type="submit" value="Delete" class="btn btn-warning" />
+
+    }
+    <p>@Html.ActionLink("Back to Marketing Page", "Marketing")</p>
+
+
+</div>
