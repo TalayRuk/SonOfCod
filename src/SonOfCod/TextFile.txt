@@ -28,3 +28,12 @@ I wish to :
 ..Add Role for admin
 ..Add Checkbox for consumer_type in subscriber view
 
+
+
+****ERROR******
+Sometimes when clone project, and try to view the site it won't work b/c doesn't have permission b/c still has path from the other computer 
+Error: file:///C:/Users/epicodus/AppData/Local/Temp/HttpFailure_12-31-53.html 
+-Close VS & Reopen it to reroute it  & Reopen then I should have the right file path 
+
+Error: When clone the project .. Db doesn't show up 
+: Run Migration, The Project Db will open but w/o prepopulated data then In MSSQL open file saved database file in project folder & Execute .. that should bring back the data 

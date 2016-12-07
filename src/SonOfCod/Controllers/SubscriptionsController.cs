@@ -21,7 +21,8 @@ namespace SonOfCod.Controllers
             _db = db;
         }
 
-        //Anyone can view Subscription page 
+        //Anyone can view Subscriptions page ***Note: views Page folder need to have the exact same name as controller
+        //Subscriptions index page didn't work before b/c Controller name: Subscriptions but the Views folder: Subscription !!missing "s"!
         
         public IActionResult Index()
         {
