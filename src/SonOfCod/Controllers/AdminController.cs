@@ -144,7 +144,7 @@ namespace SonOfCod.Controllers
             return View(thisPromo);
         }
 
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("DeleteMarketing")]
         public IActionResult DeleteMarketingConfirmed(int id)
         {
             var thisPromo = _db.Promotions.FirstOrDefault(promos => promos.Id == id);
