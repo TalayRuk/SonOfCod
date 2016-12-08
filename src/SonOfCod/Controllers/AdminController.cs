@@ -118,7 +118,7 @@ namespace SonOfCod.Controllers
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
-            //promotion.User = currentUser;
+            promotion.User = currentUser;
             _db.Promotions.Add(promotion);
             _db.SaveChanges();
             return RedirectToAction("Marketing");

@@ -18,7 +18,7 @@ namespace SonOfCod.Models
         [MinLength(10)]
         [MaxLength(5000)]
         public string Description { get; set; }
-        
+        public virtual AdminUser User { get; set; }
 
     }
 }
