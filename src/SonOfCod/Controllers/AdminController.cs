@@ -98,16 +98,22 @@ namespace SonOfCod.Controllers
         }
         //next update Index to show log out btn
 
+        [Authorize]
         public IActionResult MailingList()
         {
             return View(_db.Subscribers.ToList());
         }
         
-        //[Authorize]
-        public IActionResult Marketing()
+        [Authorize]
+        public async Task<IActionResult> Marketing()
         {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
             return View(_db.Promotions.ToList());
+            //View(_db.Promotions.Where(x => x.User.Id == currentUser.Id));
         }
+
+        [Authorize]
         public IActionResult CreateMarketing()
         {
             return View();
@@ -124,6 +130,7 @@ namespace SonOfCod.Controllers
             return RedirectToAction("Marketing");
         }
 
+        [Authorize]
         public IActionResult EditMarketing(int id)
         {
             var thisPromo = _db.Promotions.FirstOrDefault(promos => promos.Id == id);
@@ -138,6 +145,7 @@ namespace SonOfCod.Controllers
             return RedirectToAction("Marketing");
         }
 
+        [Authorize]
         public IActionResult DeleteMarketing(int id)
         {
             var thisPromo = _db.Promotions.FirstOrDefault(promos => promos.Id == id);

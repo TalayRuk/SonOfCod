@@ -64,7 +64,7 @@ namespace SonOfCod
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Welcome to Son Of Cod Seafood!");
+                await context.Response.WriteAsync("Sorry, you don't have access to this web page. You must log in first.");
             });
         }
     }
