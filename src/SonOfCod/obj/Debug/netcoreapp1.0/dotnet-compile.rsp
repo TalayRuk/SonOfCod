@@ -222,6 +222,8 @@ C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\20161205174438_Delete
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\20161205174438_DeleteAdminUserFromPromotion.Designer.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\20161207203800_CloneDB.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\20161207203800_CloneDB.Designer.cs
+C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\20161208223819_AddAdminUsertoBothModels.cs
+C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\20161208223819_AddAdminUsertoBothModels.Designer.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\AdminDbContextModelSnapshot.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Models\AdminDbContext.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Models\AdminUser.cs
