@@ -105,12 +105,15 @@ namespace SonOfCod.Controllers
         }
         
         [Authorize]
-        public async Task<IActionResult> Marketing()
+        public IActionResult Marketing()
         {
-            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var currentUser = await _userManager.FindByIdAsync(userId);
+            //using async task<This will return only the promotion that the current log-in AdminUser has added the promotion but will not see all the promotions other login AdminUsers have added! 
+            //var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            //var currentUser = await _userManager.FindByIdAsync(userId);
+            //return View(_db.Promotions.Where(x => x.User.Id == currentUser.Id));
+
+            //This type of return let all Loged in Admin to view all the promotion any login Admin has added 
             return View(_db.Promotions.ToList());
-            //View(_db.Promotions.Where(x => x.User.Id == currentUser.Id));
         }
 
         [Authorize]
@@ -130,7 +133,7 @@ namespace SonOfCod.Controllers
             return RedirectToAction("Marketing");
         }
 
-        [Authorize]
+        [Authorize] 
         public IActionResult EditMarketing(int id)
         {
             var thisPromo = _db.Promotions.FirstOrDefault(promos => promos.Id == id);
